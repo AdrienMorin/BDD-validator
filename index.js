@@ -18,7 +18,8 @@ app.get('/', async (req, res) => {
         res.send(
             "Bienvenue dans l'API de validation du module BDD de la semaine de formation à l'informatique !"
         +"\nPour envoyer une réponse, il suffit d'appeler l'API à l'URL actuelle suivie de :"
-        +"\n/{numéro de question}/{réponse}"
+        +"\n/{numéro de question}/{réponse}" +
+            "\nBonne chance !"
         );
     } catch (error) {
         console.error('Une erreur s\'est produite :', error);
