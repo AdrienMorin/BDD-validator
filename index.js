@@ -19,8 +19,53 @@ app.get('/', async (req, res) => {
             "Bienvenue dans l'API de validation du module BDD de la semaine de formation à l'informatique !"
             + "\nPour envoyer une réponse, il suffit d'appeler l'API à l'URL actuelle suivie de :"
             + "\n/{numéro de question}/{réponse}" +
+            "\nPour lancer la première énigme, il suffit d'appeler l'API avec question numéro 0 et réponse = enigme " +
             "\nBonne chance !"
         );
+    } catch (error) {
+        console.error('Une erreur s\'est produite :', error);
+    }
+});
+
+app.get('/0/:reponse', async (req, res) => {
+    try {
+        if (req.params.reponse === "enigme") {
+            res.send(
+                "Bienvenu, Agent !\n" +
+                "Voici votre mission du jour! Un diamant a été volé du coffre-fort à la banque SBANK. Nous avons besoin de vous, détective affilié à l’INSAgent-secret spécialisé en résolution d’enquête à travers des outils informatiques, pour retrouver le voleur.\n" +
+                "°˖✧◝(⁰▿⁰)◜✧˖° \n" +
+                "\n" +
+                "Vous êtes un des meilleur agent secret du groupe! \n" +
+                "Votre mission est d’attraper le COUPABLE en utilisant les informations de la base de données et en résolvant les énigmes!\n" +
+                "“ Nous avons reçu la base des données contenant la liste des trésors. Il s’agit de la table “coffreFort”. Jetez un coup d’oeil et informez-nous il y a combien de trésors au fond de ce coffre ” - ADAPolice \n" +
+                "\n" +
+                "Bon… Du coup la police vous a donné le nom de la table concernée sans donner trop de détails. Puisque c’est vos premières lignes de code, on va vous montrer un petit exemple! \n" +
+                "\n" +
+                "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
+                "[Outil utilisé : SQL]\n" +
+                "[Table concernée : “coffreFort”]\n" +
+                "\n" +
+                "Pour lire “tous les données” de la table coffreFort, testez ceci :\n" +
+                "SELECT *\n" +
+                "FROM coffreFort\n" +
+                "\n" +
+                "On ne va quand-même pas toujours tout afficher… C’est trop lourd. Puisque là on s'intéresse juste à compter les objets, on peut juste lire le nom des objets par exemple:\n" +
+                "SELECT objets\n" +
+                "FROM coffreFort\n" +
+                "\n" +
+                "Par contre, vous pouvez peut-être voir que certaine ligne s’agit d’un objet du même nom (car il y a par exemple plusieurs diamants dans le coffre). Utilisez le mot “DISTINCT” sur “objets” pour ne pas afficher les répétitions:\n" +
+                "SELECT DISTINCT objets\n" +
+                "FROM coffreFort\n" +
+                "\n" +
+                "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
+                "Maintenant, compter les lignes pour obtenir le nombre des éléments dans le coffre, puis, envoyez un mail en réponse en suivant les indications qu’on vous a apprises plus tôt.\n"
+            );
+        } else {
+            res.send(
+                "Mauvaise réponse…"
+            );
+        }
+
     } catch (error) {
         console.error('Une erreur s\'est produite :', error);
     }
@@ -35,7 +80,7 @@ app.get('/1/:reponse', async (req, res) => {
                 "\n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "[Outil utilisé : SQL]\n" +
-                "[Table concernée : “coffrecreateurs”]\n" +
+                "[Table concernée : “coffreCreateurs”]\n" +
                 "\n" +
                 "Tips : Utiliser SELECT * pour cette étape car c’est une petite table.\n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
