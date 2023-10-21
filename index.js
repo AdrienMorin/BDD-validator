@@ -596,7 +596,7 @@ app.get('/20/:reponse', async (req, res) => {
 });
 app.get('/21/:reponse', async (req, res) => {
     try {
-        if (req.params.reponse === "Nath Poléon"||req.params.reponse==="nath poléon" ) {
+        if (req.params.reponse === "Nath Poléon"||req.params.reponse==="nath poléon" || req.params.reponse==="Poléon Nath") {
             res.send(
                 "“Bonjour M./Mme. les Détectives ! \n" +
                 "Je m’appelle Nath et je travaille à SBank depuis l’an dernier.\n" +
