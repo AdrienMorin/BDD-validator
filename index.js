@@ -245,7 +245,7 @@ app.get('/7/:reponse', async (req, res) => {
                 "\n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "[Outil utilisé : SQL]\n" +
-                "[Table concernée : “employee”]\n" +
+                "[Table concernée : “employes”]\n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "\n" +
                 "Mais comment pourra-t-on contacter le témoin sans son numéro de téléphone ou son mail?! Heureusement, vous savez que cette personne est une employée de SBank et vous avez en possession la table “employes” ayant tous les informations de tous ceux qui travaillent ici.\n" +
