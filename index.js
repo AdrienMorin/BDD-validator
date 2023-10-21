@@ -264,7 +264,7 @@ app.get('/7/:reponse', async (req, res) => {
 });
 app.get('/8/:reponse', async (req, res) => {
     try {
-        if (req.params.reponse ==="erlen.meyer@sbank.fr") {
+        if (req.params.reponse ==="erlen.meyer@sbank.com") {
             res.send(
                 "Vous avez envoyé un mail à Erlen pour lui demander si c’est vrai qu’elle a trouvé un objet sur le sol. Par contre, son ordinateur est un peu buggé…\n" +
                 "\n" +
