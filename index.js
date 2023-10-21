@@ -130,7 +130,7 @@ app.get('/2/:reponse', async (req, res) => {
 
 app.get('/3/:reponse', async (req, res) => {
     try {
-        if (req.params.reponse === "Clé" || req.params.reponse === "Cle") {
+        if (req.params.reponse === "Clé" || req.params.reponse === "Cle" || req.params.reponse === "clef" || req.params.reponse === "Clef") {
             res.send(
                 "L’outil utilisé est donc une clé!\n" +
                 "Intéressons maintenant à un autre détail. Où est le coffre? \n" +
