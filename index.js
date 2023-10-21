@@ -647,7 +647,7 @@ app.get('/22/:reponse', async (req, res) => {
 });
 app.get('/23/:reponse', async (req, res) => {
     try {
-        if (req.params.reponse === "Visite de famille à Londre" ) {
+        if (req.params.reponse === "Visite de famille à Londres" || req.params.reponse === "visite de famille à Londres" || req.params.reponse === "visite en famille à Londres" || req.params.reponse === "Visite en famille à Londres") {
             res.send(
                 "Anne n’est pas à l’entreprise le jour du vol de trésors. Apparemment, elle est en vacances chez sa famille à Londre. Vérifiez si elle a vraiment pris des congés.\n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
