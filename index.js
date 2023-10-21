@@ -805,8 +805,7 @@ app.get('/29/:reponse', async (req, res) => {
                 "\n" +
                 "Tips : Lire le résumé de l’enquête et concluez qui est le coupable selon vous\n" +
                 "Tips2 : Entrez le nom du coupable dans le pdf, tout en majuscule sans espace et sans accent\n" +
-                "exemple: Bob Smith → BOBSMITH\n" +
-                "\n" +
+                "exemple: Bob Smith → BOBSMITH\n \n" +
                 + "lien des fichiers : https://we.tl/t-md9pyLRyC9 \n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "Question 30 : La conclusion de cette enquête sera révélée après l’ouverture du document.\n"
