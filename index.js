@@ -329,7 +329,7 @@ app.get('/10/:reponse', async (req, res) => {
                 "Modifiez votre requête de filtrage (celui de l’étape 6) en ajoutant cette dernière caractéristique suspecte.\n" +
                 "Triez ces salariés par ordre alphabétique (nom puis prenom) avec ORDER BY .\n" +
                 "\n" +
-                "Question 11 : Quel est le nom et prénom de la première personne de la liste?\n"
+                "Question 11 : Quel est le nom et prénom de la première personne de la liste?(format:Nom Prénom)\n"
             );
         } else {
             res.send(
