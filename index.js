@@ -58,7 +58,7 @@ app.get('/0/:reponse', async (req, res) => {
                 "FROM coffreFort\n" +
                 "\n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
-                "Maintenant, compter les lignes pour obtenir le nombre des éléments dans le coffre, puis, envoyez un mail en réponse en suivant les indications qu’on vous a apprises plus tôt.\n"
+                "Question 1 : Maintenant, compter les lignes pour obtenir le nombre des éléments dans le coffre, puis, envoyez un mail en réponse en suivant les indications qu’on vous a apprises plus tôt.\n"
             );
         } else {
             res.send(
@@ -85,7 +85,7 @@ app.get('/1/:reponse', async (req, res) => {
                 "Tips : Utiliser SELECT * pour cette étape car c’est une petite table.\n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "\n" +
-                "Cherchez le numéro de portable du fabricant du coffre et envoyez ça en réponse du mail ! \n"
+                "Question 2 : Cherchez le numéro de portable du fabricant du coffre et envoyez ça en réponse du mail ! \n"
             );
         } else {
             res.send(
@@ -115,7 +115,7 @@ app.get('/2/:reponse', async (req, res) => {
                 "\n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "\n" +
-                "Quel outil le coupable a donc utilisé pour ouvrir le coffre?\n"
+                "Question 3 : Quel outil le coupable a donc utilisé pour ouvrir le coffre?\n"
             );
         } else {
             res.send(
@@ -143,7 +143,7 @@ app.get('/3/:reponse', async (req, res) => {
                 "\n" +
                 "“OUiiiiiii j3 sAis où e5T le c0FfRe. C’35t à l’éTAge [1011] :) \n" +
                 "Lololololol.\" - Agent Z\n" +
-                "Quel est l’étage du coffre?\n"
+                "Question 4 : Quel est l’étage du coffre?\n"
             );
         } else {
             res.send(
@@ -173,7 +173,7 @@ app.get('/4/:reponse', async (req, res) => {
                 "\n" +
                 "Il y a trop d’employés. Vous devez les filtrer en cherchant seulement ceux qui travaillent à l’étage concerné.\n" +
                 "\n" +
-                "Aviez-vous réussi? Votre collègue souhaite vous aider un peu mais il a besoin de voir votre avancement. Quelle est la requête (le code SQL) utilisée? "
+                "Question 5 : Aviez-vous réussi? Votre collègue souhaite vous aider un peu mais il a besoin de voir votre avancement. Quelle est la requête (le code SQL) utilisée? "
             );
         } else {
             res.send(
@@ -200,7 +200,7 @@ app.get('/5/:reponse', async (req, res) => {
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "\n" +
                 "Filtrer encore plus votre requête de l’étape 5 avec ces nouvelles caractéristiques.\n" +
-                "Combien de suspects avez-vous obtenu après ce filtrage?"
+                "Question 6 : Combien de suspects avez-vous obtenu après ce filtrage?"
             );
         } else {
             res.send(
@@ -225,7 +225,7 @@ app.get('/6/:reponse', async (req, res) => {
                 "\n" +
                 "“Des pistes pour votre enquête? Bahh… Ce n'est pas moi qui suis responsable en tout cas. \n" +
                 "Voici les affaires en cours : https://we.tl/t-l4FcGWbKHf \n" +
-                "Cherchez le numéro de téléphone portable de l’officier responsable et contactez-le vous-même” - Assistant de l’agence officier\n"
+                "Question 7 : Cherchez le numéro de téléphone portable de l’officier responsable et contactez-le vous-même” - Assistant de l’agence officier\n"
             );
         } else {
             res.send(
@@ -250,7 +250,7 @@ app.get('/7/:reponse', async (req, res) => {
                 "\n" +
                 "Mais comment pourra-t-on contacter le témoin sans son numéro de téléphone ou son mail?! Heureusement, vous savez que cette personne est une employée de SBank et vous avez en possession la table “employes” ayant tous les informations de tous ceux qui travaillent ici.\n" +
                 " \n" +
-                "Cherchez cette personne et récupérez son adresse mail."
+                "Question 8 : Cherchez cette personne et récupérez son adresse mail."
             );
         } else {
             res.send(
@@ -276,7 +276,7 @@ app.get('/8/:reponse', async (req, res) => {
                 "Tips: ASCII\n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "\n" +
-                "Traduisez ce message en quelque chose de plus compréhensible. Quelle est sa réponse?\n"
+                "Question 9 : Traduisez ce message en quelque chose de plus compréhensible. Quelle est sa réponse?\n"
             );
         } else {
             res.send(
@@ -301,7 +301,7 @@ app.get('/9/:reponse', async (req, res) => {
                 "\n" +
                 "“01000010 01100001 01100111 01110101 01100101 00100000 01100101 01101110 00100000 01100100 01101001 01100001 01101101 01100001 01101110 01110100” -  Erlen Meyer\n" +
                 "\n" +
-                "Qu’elle est l'objet qu’elle a trouvé?\n"
+                "Question 10 : Qu’elle est l'objet qu’elle a trouvé?\n"
             );
         } else {
             res.send(
@@ -329,7 +329,7 @@ app.get('/10/:reponse', async (req, res) => {
                 "Modifiez votre requête de filtrage (celui de l’étape 6) en ajoutant cette dernière caractéristique suspecte.\n" +
                 "Triez ces salariés par ordre alphabétique (nom puis prenom) avec ORDER BY .\n" +
                 "\n" +
-                "Quel est le nom et prénom de la première personne de la liste?\n"
+                "Question 11 : Quel est le nom et prénom de la première personne de la liste?\n"
             );
         } else {
             res.send(
@@ -345,7 +345,7 @@ app.get('/11/:reponse', async (req, res) => {
     try {
         if (req.params.reponse === "ABAMA Baraque" || req.params.reponse === "Abama Baraque") {
             res.send(
-                "Contactons “Baraque Abama”. Quel est son numéro de téléphone portable?\n" +
+                "Contactons “Baraque Abama”. Question 12 :  Quel est son numéro de téléphone portable?\n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "[Outil utilisé : SQL]\n" +
                 "[Table concernée : “employes”]\n" +
@@ -373,7 +373,7 @@ app.get('/12/:reponse', async (req, res) => {
                 "[Outil utilisé : SQL]\n" +
                 "[Table concernée : “employes”]\n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
-                "Cherchons l’adresse mail de la femme de Baraque.\n"
+                "Question 13 : Cherchons l’adresse mail de la femme de Baraque.\n"
             );
         } else {
             res.send(
@@ -399,7 +399,7 @@ app.get('/13/:reponse', async (req, res) => {
                 "[Outil utilisé: Votre cerveau] \n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "\n" +
-                "Contactez le collègue de Baraque par téléphone ou par mail.\n"
+                "Question 14 : Contactez le collègue de Baraque par téléphone ou par mail.\n"
             );
         } else {
             res.send(
@@ -428,7 +428,7 @@ app.get('/14/:reponse', async (req, res) => {
                 "Vérifions quand est-ce qu’il a demandé ses congés.\n" +
                 "\n" +
                 "Les dates de congés se trouvent sur une autre table utilisant comme attribut les codes d’employés et pas leur nom. Commençons par chercher cette information sur la table “employés”.\n" +
-                "Quel est le code de Baraque Abama?\n"
+                "Question 15 : Quel est le code de Baraque Abama?\n"
             );
         } else {
             res.send(
@@ -446,7 +446,7 @@ app.get('/15/:reponse', async (req, res) => {
             res.send(
                 "“Baraque a demandé ses congés le même jour qu’il a appris qu’il a gagné à la loterie. En plus, c’est ses premiers congés depuis un an. Il les mérite totalement!” - Sonique Ninjah, un autre collègue de Baraque\n" +
                 "\n" +
-                "En utilisant son code Employé “ABABA95”, chercher dans la table d’informations concernant les congés sa date de demande de congé. \n" +
+                "Question 16 : En utilisant son code Employé “ABABA95”, chercher dans la table d’informations concernant les congés sa date de demande de congé. \n" +
                 "\n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "[Outil utilisé: SQL] \n" +
@@ -467,7 +467,7 @@ app.get('/16/:reponse', async (req, res) => {
     try {
         if (req.params.reponse === "10/04/2022" || req.params.reponse === "10.04.2022") {
             res.send(
-                "Quel est la date quand les trésors ont été volés? \n" +
+                "Question 17 : Quel est la date quand les trésors ont été volés? \n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "[Outil utilisé: Votre cerveau] \n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"
@@ -494,7 +494,7 @@ app.get('/17/:reponse', async (req, res) => {
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "[Outil utilisé: Votre cerveau] \n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
-                "Quand Baraque a-t-il payé son billet d’avion?\n"
+                "Question 18 : Quand Baraque a-t-il payé son billet d’avion?\n"
             );
         } else {
             res.send(
@@ -512,7 +512,7 @@ app.get('/18/:reponse', async (req, res) => {
             res.send(
                 "Vous avez fini d’investiguer le premier suspect. \n" +
                 "Passons donc à la deuxième personne: Mme. Anne Nanaz. \n" +
-                "Quel est son email?\n" +
+                "Question 19 : Quel est son email?\n" +
                 "\n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "[Outil utilisé: SQL] \n" +
@@ -551,7 +551,8 @@ app.get('/19/:reponse', async (req, res) => {
                 "J’ai changé d’avis. Je vous offre une chance de me poser une question. \n" +
                 "Si vous résolvez l’énigme ci-dessous, je répondrai à vos interrogations : \n" +
                 "[54 61 72 74 65 20 61 75 78 20 70 6F 6D 6D 65 73]\n" +
-                "Sincèrement,” - Anne Nanaz\n"
+                "Sincèrement,” - Anne Nanaz\n" +
+                "(Question 20)"
             );
         } else {
             res.send(
@@ -581,7 +582,7 @@ app.get('/20/:reponse', async (req, res) => {
                 "[Table concernée : “employes”]\n" +
                 "\n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
-                "Quel est le nom et prénom de cette personne?\n"
+                "Question 21 : Quel est le nom et prénom de cette personne?\n"
             );
         } else {
             res.send(
@@ -609,7 +610,7 @@ app.get('/21/:reponse', async (req, res) => {
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "\n" +
                 "Apparemment, l’username est son prénom suivi de sa date de naissance (JJMM) . \n" +
-                "Quel est le username de compte twitta de notre suspect?"
+                "Question 22 : Quel est le username de compte twitta de notre suspect?"
             );
         } else {
             res.send(
@@ -632,7 +633,7 @@ app.get('/22/:reponse', async (req, res) => {
                 "Tips : Vérifiez le format des dates de cette table\n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "\n" +
-                "Que fait Anne le jour de l’incident? \n"
+                "Question 23 : Que fait Anne le jour de l’incident? \n"
             );
         } else {
             res.send(
@@ -655,7 +656,7 @@ app.get('/23/:reponse', async (req, res) => {
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "\n" +
                 "Le code d’employé de Anne est “NANAN80” \n" +
-                "Si elle a demandé un congé recemment, donner le id de sa demande de congé.\n" +
+                "Question 24 : Si elle a demandé un congé recemment, donner le id de sa demande de congé.\n" +
                 "Si non, répondre “NON”\n"
             );
         } else {
@@ -672,7 +673,7 @@ app.get('/24/:reponse', async (req, res) => {
     try {
         if (req.params.reponse === "152" ) {
             res.send(
-                "Vous avez fini d’investiguer le 2nd suspect. Passons maintenant à la dernière personne: Basile Meyer. Quelle est son adresse mail?\n" +
+                "Question 25 : Vous avez fini d’investiguer le 2nd suspect. Passons maintenant à la dernière personne: Basile Meyer. Quelle est son adresse mail?\n" +
                 "\n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "[Outil utilisé : SQL]\n" +
@@ -701,7 +702,7 @@ app.get('/25/:reponse', async (req, res) => {
                 "[Outil utilisé : Votre cerveau]\n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "\n" +
-                "Quelle est la réponse que Basile cherchait?\n"
+                "Question 26 : Quelle est la réponse que Basile cherchait?\n"
             );
         } else {
             res.send(
@@ -728,7 +729,7 @@ app.get('/26/:reponse', async (req, res) => {
                 "[Table concernée: “employes”]\n" +
                 "Tips: le chef de projet de Basile a comme métier “Chef Finance” sur la table\n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
-                "Quel est le nom et prénom de cette personne?\n"
+                "Question 27 : Quel est le nom et prénom de cette personne?\n"
             );
         } else {
             res.send(
@@ -752,7 +753,7 @@ app.get('/27/:reponse', async (req, res) => {
                 "[Table concernée: “employes”]\n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "\n" +
-                "Appeler Basile pour demander pourquoi il n’est pas revenu à l’entreprise entre 16:00 et 18:00."
+                "Question 28 : Appeler Basile pour demander pourquoi il n’est pas revenu à l’entreprise entre 16:00 et 18:00."
             );
         } else {
             res.send(
@@ -768,7 +769,7 @@ app.get('/28/:reponse', async (req, res) => {
     try {
         if (req.params.reponse === "0645875325"|| req.params.reponse === "645875325" ) {
             res.send(
-                "“Oui oui oui. J’ai terminé ma réunion avec AquaWorld à 16:00 et j’ai un peu hésité à retourner à l’entreprise. Mais je me suis rendu compte que j’ai laissé mon badge d’accès à la maison. Puisque je n’ai pas de temps de retourner chez moi puis revenir à l’entreprise, j’ai attendu jusqu’à 19:00 à StarBACKs, à côté du restaurant.” - Erlen Meyer \n" +
+                "Question 29 : “Oui oui oui. J’ai terminé ma réunion avec AquaWorld à 16:00 et j’ai un peu hésité à retourner à l’entreprise. Mais je me suis rendu compte que j’ai laissé mon badge d’accès à la maison. Puisque je n’ai pas de temps de retourner chez moi puis revenir à l’entreprise, j’ai attendu jusqu’à 19:00 à StarBACKs, à côté du restaurant.” - Erlen Meyer \n" +
                 "\n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
                 "[Outil utilisé : Votre cerveau]\n" +
@@ -808,7 +809,7 @@ app.get('/29/:reponse', async (req, res) => {
                 "\n" +
                 + "lien des fichiers : https://we.tl/t-md9pyLRyC9 \n" +
                 "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n" +
-                "La conclusion de cette enquête sera révélée après l’ouverture du document.\n"
+                "Question 30 : La conclusion de cette enquête sera révélée après l’ouverture du document.\n"
             );
         } else {
             res.send(
