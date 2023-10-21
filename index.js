@@ -716,7 +716,7 @@ app.get('/25/:reponse', async (req, res) => {
 });
 app.get('/26/:reponse', async (req, res) => {
     try {
-        if (req.params.reponse === "483 euros" ) {
+        if (req.params.reponse === "483 euros" || req.params.reponse === "483€" || req.params.reponse === "483 €" || req.params.reponse === "483") {
             res.send(
                 "Vous demandez à Basile ce qu’il faisait le jour de l’accident. \n" +
                 "\n" +
