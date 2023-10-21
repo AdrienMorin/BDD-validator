@@ -743,7 +743,7 @@ app.get('/26/:reponse', async (req, res) => {
 });
 app.get('/27/:reponse', async (req, res) => {
     try {
-        if (req.params.reponse === "NIKOLAS SACOSIE"||req.params.reponse==="Nikolas Sacosie" ) {
+        if (req.params.reponse === "NIKOLAS SACOSIE"||req.params.reponse==="Nikolas Sacosie" ||req.params.reponse==="Sacosie Nikolas") {
             res.send(
                 "Vous contactez le chef de l’équipe de Finance.\n" +
                 "“Oui, le 12/04, M.Meyer avait assisté à la réunion de formation avec notre partenaire AquaWorld de 8:00 à 16:00 et je peux confirmer que personne ne l’a vu à l’entreprise. A 19:00, nous avons diné ensemble dans un restaurant pour discuter des conséquences de ce partenariat.”\n" +
