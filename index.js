@@ -187,7 +187,7 @@ app.get('/4/:reponse', async (req, res) => {
 });
 app.get('/5/:reponse', async (req, res) => {
     try {
-        if (req.params.reponse==="SELECT * FROM employes WHERE etage=11" || req.params.reponse==="SELECT * FROM employes WHERE etage=11;") {
+        if (req.params.reponse==="SELECT * FROM employes WHERE etage=11" || req.params.reponse==="SELECT * FROM employes WHERE etage=11;" || req.params.reponse==="SELECT * FROM employes WHERE etage = 11" || req.params.reponse==="SELECT * FROM employes WHERE etage = 11;" || req.params.reponse==="select * from employes where etage=11" || req.params.reponse==="select * from employes where etage=11;") {
             res.send(
                 "“ 0k, la r3QuêTe e5t cOrREct3. SUuuupEr! Co0l! (☞ﾟヮﾟ)☞\n" +
                 "J3 te d0NNe aLoRrrs uNe nOUveLLe inD1cati0n : le cOupaBle a sûREmeNt un sALaire c0mpr1s eNTRe 1000 et 1500 €!” - Ton best bro, Agent Z\n" +
